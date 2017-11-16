@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS代码的位置</title>
+<script type="text/javascript">
+  
+</script>
+</head>
+<body>
+<script type="text/javascript">
+ 	document.write("JS代码的位置");
+ 	function contxt(){
+ 		var mynum = "一些内容！";
+ 		var context="";
+ 	    var b = confirm("是否确定");
+ 	    alert("点击了！");
+ 		if (b) {
+ 			context = "确定一些内容";
+ 			document.write(context);
+ 		}else{
+ 			context = "取消一些内容";
+ 		}		
+ 		alert(mynum);
+ 	}
+
+ 	function Score(){
+ 		var score = "";
+ 		score = prompt("输入你的成绩：", score);
+ 			if(score>=90)
+	{
+	   document.write("你很棒!");
+	}
+	else if(score>=75)
+    {
+	   document.write("不错吆!");
+	}
+	else if(score>=60)
+    {
+	   document.write("要加油!");
+    }
+    else
+	{
+       document.write("要努力了!");
+	}
+
+ 	}
+ 	 function Wopen(){
+ 	 	var wy;
+ 	 	wy = prompt("输入网页：",wy);
+    window.open("http://"+wy,'_blank','width=600,height=400,top=100,left=0');  
+  } 
+   function Close(){
+   		var h =  window.location.href;
+   		alert(h);
+   }
+    function openWindow(){
+        var w = prompt("输入打开的网址：", w);
+        var b = confirm("是否打开！");
+        if(b){
+            window.open(w,"_blank","width=400,height=500,menbar=no,toolbar=no");
+        }
+    }
+
+    var v = document.getElementById("con");
+    document.write("11111"+v.value());
+
+    function showCon(){
+    	var mychar = document.getElementById("context");
+    	mychar.style.display = "block";
+    }
+
+      function hideCon(){
+    	var mychar = document.getElementById("context");
+    	mychar.style.display = "none";
+    }
+</script>
+	<button  onclick="contxt()" >点击按钮</button>
+	<button  onclick="Score()" >查询是否及格</button>
+	<button  onclick="Wopen()" >打开你想打开的网页</button>
+	<button  onclick="Close()" >网获取页地址</button>
+	 <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
+	 <p id="con">内容啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+	 <h1 id="context">显示或者隐藏内容</h1>
+	 <button value="显示内容" onclick="showCon()">显示内容</button> <button value="隐藏内容" onclick="hideCon()">隐藏内容</button><br/>
+</body>
+</html>
